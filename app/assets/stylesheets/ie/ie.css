@@ -1,0 +1,6 @@
+.work li{
+	float: left;
+	overflow: hidden;
+	position: relative;
+	width: 50%;
+}

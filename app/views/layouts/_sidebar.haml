@@ -1,0 +1,35 @@
+%aside{class: "sidebar about"}
+	.nav_responsive
+		= image_tag "nav_responsive.png", alt: "Image"
+	.logo
+		= link_to image_tag("logo.png", alt: ""), root_path
+		%h1 Lemmonhead
+	%nav
+		%ul
+			%li
+				= link_to "HOME", root_path
+			%li
+				= link_to "BLOG", blog_path
+			%li
+				= link_to "WORK", medalkore_path
+			%li
+				= link_to "ABOUT", about_path
+			%li
+				= link_to "CONTACT", contact_path
+	%h4
+		%span SOCIAL
+	%ul.social
+		%li
+			= link_to "", facebook_path, class: "icon-facebook"
+		%li
+			= link_to "", twitter_path, class: "icon-twitter"
+		%li
+			= link_to "", linked_in_path, class: "icon-linkedin"
+		%li
+			= link_to "", google_plus_path, class: "icon-google-plus"
+	.coopring
+		%p
+			&copy; 2013
+			%br
+			= link_to "MedalKore Media", medalkore_path
+		

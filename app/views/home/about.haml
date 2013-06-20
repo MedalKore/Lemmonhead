@@ -1,0 +1,58 @@
+= render "layouts/header"
+%section.content
+	.row-fluid
+		.titles_large
+			%h1
+				About Meh
+				%br
+				%span
+					Get to Know Me
+		%div{class: "row-fluid team"}
+			.span3
+				.item_team
+					%img{src: "img/team/1.jpg", alt: "Image"}
+		.titles
+			%h1
+				Meet Jenna Sulvian
+				%span.line
+		%p All this info about me is the best.
+		.divisor
+		.titles
+			%h1
+				Skills
+				%span.line
+		%div{class: "meter colora"}
+			%span{style: "width: 100%"}
+				%span Web Design
+				%span{class: "text_right"}
+					100%
+		%div{class: "meter colorb"}
+			%span{style: "width: 80%"}
+				%span Photography
+				%span{class: "text_right"} 80%
+		%div{class: "meter colorc"}
+			%span{style: "width: 95%"}
+				%span Graphic Design
+				%span{class: "text_right"} 95%
+		%div{class: "meter colore"}
+			%span{style: "width: 75%"}
+				%span Programmer
+				%span{class: "text_right"} 75%
+		%div{class: "divisor"}
+		%div{class: "titles"}
+			%h1
+				My Work
+				%span{class: "line"}
+		%ul.work
+			%li.span4
+				%img{src: "img/works/1.jpg", alt: ""}
+				%a{href: "img/works/1.jpg", class: "fancybox"}
+					%span.overlay
+			%li.span4
+				%img{src: "img/works/2.jpg", alt: ""}
+				%a{href: "img/works/2.jpg", class: "fancybox"}
+					%span.overlay
+			%li.span4
+				%img{src: "img/works/4.jpg", alt: ""}
+				%a{href: "img/works/4.jpg", class: "fancybox"}
+					%span.overlay

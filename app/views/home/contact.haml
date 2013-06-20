@@ -1,0 +1,60 @@
+= render "layouts/header"
+%section.content
+	.row-fluid
+		.titles_large
+			%h1
+				Come drop us a message
+				%br
+				%span
+					lets get in contact!
+		.titles
+			%h1
+				On the map
+				%span.line
+		.map_area
+			%iframe{src: "https://maps.google.es/maps?f=q&amp;source=s_q&amp;hl=es&amp;geocode=&amp;q=new+york&amp;aq=&amp;sll=40.396764,-3.713379&amp;sspn=9.61761,19.753418&amp;ie=UTF8&amp;hq=&amp;hnear=Nueva+York,+Estados+Unidos&amp;ll=40.614353,-74.005973&amp;spn=0.598524,1.234589&amp;t=m&amp;z=10&amp;output=embed"}
+		%div{class: "row-fluid no_margin"}
+			.span4
+				%h5 Flatbush Gardens
+				%p
+					1403 New York Avenue
+					%br
+					Brooklyn, NY 11210, United States
+					%br
+					+(718) 564-1260
+			.span4
+				%h5 Inquiries
+				%p
+					%span Publishers
+					%br
+					publishers@flipboard.com
+				%p
+					%span Media
+					%br
+					marci@flipboard.com
+					christel@flipboard.com
+			.span4
+				%h5 General Information
+				%p
+					info@flipboard.com
+					%br
+					featured@flipboard.com
+				%p
+					= link_to "#", "www.flipboard.com"
+		.divisor
+		.titles
+			%h1
+				Get in touch
+				%span.line
+		%p Blackbaud had put out a PDF document called Understanding the Value of Your Social Media Influencers: How to Identify and Empower Those Who Can Engage an Entire Community. These are illustrations I created for an online infographic that accompanied their publication.
+
+		= form_tag  "/submit", id: "form" do
+			.row-fluid
+				.span6
+					= text_field :contact, :name, type: "text", placeholder: "Name", required: true, name: "Name"
+				.span6
+					= text_field :contact, :email, type: "email", placeholder: "Email Address", required: true, name: "Email"
+				= text_field :contact, :subject, type: "text", placeholder: "Subject", required: true, name: "Subject"
+				= text_area :contact, :message, placeholder: "Message...", required: true, name: "Message"
+				= submit_tag "SEND", class: "submit_form"
+		#result

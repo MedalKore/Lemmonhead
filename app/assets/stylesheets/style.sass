@@ -1,0 +1,1144 @@
+@charset "utf-8"
+
+ 
+// - Title: Sideblog Template 
+// - Autor: "freshcreations"
+// - Email: "info@freshcreations.nl"
+// - Version: 1.0
+
+//  ---------------------- 
+// 	Stylesheet Guide
+// -------------------------
+
+// 01. Import styles
+// 	-  bootstrap.css  - include resetes ( Media querys, grid-responsive,layout).
+// 	-  bootstrap-responsive.css	
+// 	-  jquery.fancybox-1.3.1.css  - Lightbox	
+// 	-  Fonts	
+	
+// 02. Basic Elements
+// 	-  Standar Styles	
+// 	-  Class and styles Generals
+// 	-  Divisor
+// 	-  Titles  	
+// 	-  Top
+
+// 0.3.  Structure
+// 	-  Header
+// 	-  Main Navigation
+// 	-  Works
+// 	-  Commnets
+// 	-  Social
+// 	-  Footer
+// 	-  Sections Titles
+// 	-  Contact
+// 	-  item_team
+	
+// 0.4.	Layout 1024px version
+
+// 0.5.	Layout for 767px mobile version
+
+// 0.6.	Layout for 568px mobile version
+
+// 0.7.	Layout for 380px mobile version
+
+// 0.8.	Layout for 320px mobile version
+
+
+
+// /* ---------------------------------------------------------------------- */
+// /*	01 Import styles
+// /* ---------------------------------------------------------------------- */
+
+ // bootstrap.css  - include resetes ( Media querys, grid-responsive,layout).
+@import url("bootstrap/bootstrap.css")
+@import url("bootstrap/bootstrap-responsive.css")
+// jquery.fancybox-1.3.1.css  - Lightbox
+@import url("../js/fancybox/jquery.fancybox-1.3.1.css")
+/*Icons Font-Awesome*/
+@import url("icons/font-awesome.min.css")
+/*Fonts*/
+@import url("fonts/fonts.css")
+
+
+
+// ---------------------------------------------------------------------- */
+// 	02 Basic Elements
+// ---------------------------------------------------------------------- 
+
+// Standar Styles --------------------------------------------------------
+
+body
+	font-size: 18px
+	font-family: 'HelveticaNeueLTPro-Roman', Arial, sans-serif
+	line-height: 24px
+	color: #2d2d2d
+	position: relative
+	font-weight: 300
+	background-color: #fff
+
+a
+	color: #43402f
+
+a:hover
+	text-decoration: none	
+	color: #de4b39
+
+p
+	margin: 0 0 20px 0
+	padding: 0
+	font-weight: 300
+	line-height: 24px
+
+h1
+	font-size: 48px
+	line-height: 48px
+	letter-spacing: -2.5px
+
+h2
+	font-size: 30px
+h3
+	font-size: 24px
+h4
+	font-size: 20px
+h5
+	font-size: 18px
+h6
+	font-size: 14px
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal	
+	padding: 5px 0 15px 0	
+	margin: 0
+	color: #2d2d2d
+	font-family: 'HelveticaNeueLTPro-Roman', Arial, sans-serif
+
+/* Class and styles General ----------------------------*/
+
+.clearfix
+	width: 1px
+	height: 1px
+	display: block
+	clear: both
+	content: " , "
+
+.alignleft
+	float: left
+
+.alignright
+	float: right
+
+.text_right
+	text-align: right
+
+.center
+	text-align: center
+
+.padding_top
+	padding-top: 20px
+
+.padding_bottom
+	padding-bottom: 40px
+
+.padding_top_mini
+	padding-top: 15px
+
+.margin_top
+	margin-top: 40px
+
+.video
+	width: 100%
+	height: 400px
+	margin-bottom: 20px
+
+.video iframe
+	width: 100%
+	height: 100%
+
+
+/* divisor  ----------------------------*/
+
+.divisor
+	position: relative
+	width: 100%
+	height: 2px
+	margin: 80px 0
+	background-color: #dbdbdb
+
+
+/* Titles  Large----------------------------*/
+
+.titles_large
+	margin-bottom: 100px
+	text-align: center
+
+.titles_large h1
+	font-size: 72px
+	line-height: 72px
+	letter-spacing: -5px
+
+.titles_large h1 span
+	border-bottom: 8px solid #25ae90
+	padding-bottom: 10px
+	margin-left: -15px
+	font-size: 50px
+
+
+/* Titles  Normal----------------------------*/
+
+.titles
+	margin: 0 0 30px 0
+	position: relative
+
+.titles h1
+	position: relative
+	font-size: 48px
+	line-height: 48px
+	letter-spacing: -2.5px
+
+.titles h1 .line
+	height: 2px
+	left: 0
+	width: 25%
+	background: #de4b39
+	position: absolute
+	bottom: 8px
+
+.titles h1 a
+	color: #de4b39
+
+
+/* Top ---------------------------------------------------------*/
+
+#toTop
+	display: none
+	text-decoration: none
+	position: fixed
+	bottom: 10px
+	right: 10px
+	overflow: hidden
+	width: 51px
+	height: 51px
+	border: none
+	text-indent: 100%
+	background: url("../img/ui.totop.png") no-repeat left top
+
+#toTopHover
+	background: url("../img/ui.totop.png") no-repeat left -51px
+	width: 51px
+	height: 51px
+	display: block
+	overflow: hidden
+	float: left
+	opacity: 0
+	-moz-opacity: 0
+
+#toTop:active, #toTop:focus
+	outline: none
+
+
+/* ---------------------------------------------------------------------- */
+/*	03 Structure
+/* ---------------------------------------------------------------------- */
+
+/* Sidebar  ---------------------------------------------------------*/
+
+.sidebar
+	background: #1f2b36
+	width: 8%
+	height: auto
+	min-height: 140px
+	position: absolute
+	padding: 25px 2%
+
+.sidebar .logo
+	width: 100%	
+	max-width: 88px
+	margin: 0 auto
+
+.sidebar .logo img
+	width: 100%
+
+.sidebar .logo h1
+	color: #fff
+	padding-top: 20px
+	margin-left: -15px
+	font-size: 23px
+	line-height: 30px
+	text-align: center
+	font-weight: bold
+	font-family: 'ProximaNova', Arial, sans-serif
+
+.sidebar h4
+	color: #aaaeb4
+	text-align: center
+	font-size: 14px
+	font-weight: bold
+	margin-bottom: 30px
+	display: block
+	font-family: 'ProximaNova', Arial, sans-serif
+
+.sidebar h4 span
+	border-bottom: 2px #de4b39 solid
+	padding-bottom: 10px
+
+.home
+	height: 3650px
+
+.about
+	height: 2050px
+
+.blog
+	height: 4550px
+
+.works
+	height: 2050px
+
+.contact
+	height: 1900px
+
+.cases
+	height: 2850px
+
+.single
+	height: 2680px
+
+/* Nav  ---------------------------------------------------------*/
+
+nav
+	width: 100%
+	margin: 70px 0
+
+nav ul
+	margin: 0
+	list-style: none
+	text-align: center
+
+nav ul li
+	margin-bottom: 20px
+
+nav ul li a
+	color: #aaaeb4
+	font-weight: normal
+	font-size: 14px
+	line-height: 24px
+	padding-bottom: 10px
+	font-family: 'ProximaNova', Arial, sans-serif
+
+nav ul li a:hover
+	color: #fff
+	border-bottom: 2px #de4b39 solid
+
+.nav_responsive
+	display: none
+
+/* Header  ---------------------------------------------------------*/
+
+header
+	width: 92%
+	padding: 32px 4% 16px 4%
+	border-bottom: 1px solid #dbdbdb
+
+header .twitt
+	text-align: right
+
+header .twitt a
+	color: #de4b39
+
+header .twitt p
+	font-size: 14px
+	margin: 0
+
+header h6
+	padding: 0
+
+/* Content  ---------------------------------------------------------*/
+
+.wraper
+	width: 88%
+	margin-left: 12%	
+
+.content
+	max-width: 800px		
+	margin: 0 auto
+	padding: 80px 0
+
+/* Works ----------------------------*/
+
+.work
+	list-style: none
+	background: none
+	display: inline-table
+	margin: 0 auto
+
+.work li
+	float: left
+	overflow: hidden
+	position: relative
+	width: 50%
+
+.work li img
+	width: 100%
+
+.work li .overlay
+	background: #de4b39  url("../img/more.png") no-repeat center center
+	background: rgba(222, 75, 57, 0.7) url("../img/more.png") no-repeat center center
+	width: 100%
+	height: 100%
+	position: absolute
+	top: -400px
+	left: 0
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+.work li:hover .overlay
+	top: 0
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+/* Case ----------------------------*/
+
+.case
+	list-style: none
+	background: none
+	display: inline-table
+	margin: 0 auto
+
+.case li
+	width: 100%
+	margin-bottom: 30px
+	overflow: hidden
+	position: relative
+
+.case li img
+	width: 100%
+
+.case li .overlay
+	background: #de4b39
+	background: rgba(222, 75, 57, 0.7) url("../img/more.png") no-repeat center center
+	width: 100%
+	height: 100%
+	position: absolute
+	top: -600px
+	left: 0
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+.case li:hover .overlay
+	top: 0
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+p strong
+	color: #2d2d2d
+	font-weight: bold
+
+.navigation_case
+	position: absolute
+	right: 0
+	top: 20%
+
+.navigation_case a:hover
+	color: #de4b39
+
+.fb-follow
+	float: left
+	margin-right: 20px
+	margin-top: -5px
+
+/* Portfolio ------------------------------*/
+
+.filters
+	margin: 0px 0 50px 0
+	padding: 10px 0
+
+ul.filter
+	text-align: left
+	margin: 0
+
+ul.filter li
+	list-style: none
+	color: #0f0e0f
+	float: left
+	padding-right: 15px
+	text-align: center
+	font-weight: 600
+	font-size: 13px
+
+ul.filter li span
+	padding-left: 20px
+	float: right
+
+ul.filter li a
+	color: #555
+	float: left
+	padding: 2px 3px
+	font-size: 18px
+
+ul.filter li a:hover
+	color: #de4b39
+
+ul.filter li a.active
+	color: #de4b39
+
+.port
+	margin: 50px 0
+
+.item_portfolio
+	float: left
+	width: 30%
+	margin: 0  2.5% 10px 0
+
+.item_portfolio img
+	width: 100%
+
+.item_portfolio .info_portfolio
+	padding: 0 5% 10px 5%
+
+.item_portfolio .info_portfolio p
+	text-align: center
+	line-height: 22px
+	margin-top: 20px
+
+.item_portfolio .image_portfolio
+	position: relative
+	overflow: hidden
+
+.item_portfolio .overlay
+	position: absolute
+	top: -500px
+	left: 0
+	width: 100%
+	background: #de4b39 url("../img/more.png") no-repeat center center
+	background: rgba(222, 75, 57, 0.7) url("../img/more.png") no-repeat center center
+	height: 100%
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+.item_portfolio .image_portfolio:hover .overlay
+	top: 0
+	cursor: pointer
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+/* Flickr ----------------------------*/
+
+.flickr
+	list-style: none
+	margin: 0 auto 70px auto
+	padding: 0
+	width: 100%
+	max-width: 90px
+
+.flickr li
+	overflow: hidden
+	position: relative
+	width: 100%
+
+.flickr li img
+	width: 100%
+
+.flickr li .overlay
+	background: #de4b39
+	background: rgba(0, 0, 0, 0.7) url("../img/more.png") no-repeat center center
+	width: 100%
+	height: 100%
+	position: absolute
+	top: -400px
+	left: 0
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+.flickr li:hover .overlay
+	top: 0
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+/* Social   ----------------------------*/
+
+.social
+	list-style: none
+	display: table
+	margin: 0 auto 70px auto
+	max-width: 45px
+
+.social li
+	border-radius: 50%
+	border: 4px solid #1a242d
+	margin-bottom: 10px
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+.social li i
+	color: #1a242d
+	font-size: 25px
+	padding: 8px 6px
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+.social li:hover
+	border: 4px solid #151d25
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+.social li:hover i
+	color: #151d25
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+/* Coopring ----------------------------*/
+
+.coopring
+	text-align: center
+	margin-top: 30px
+
+.coopring p
+	color: #abafb5
+	font-size: 14px
+	font-weight: 600
+
+/* Contact  ----------------------------*/
+
+.map_area
+	width: 100%
+	height: 330px
+	margin-bottom: 20px
+
+.map_area iframe
+	width: 100%
+	height: 100%
+	border: 0
+
+#form
+	margin-top: 40px
+
+#form input
+	width: 100%
+	height: 35px
+	margin-bottom: 20px
+	border-radius: 0
+
+#form textarea
+	width: 100%
+	height: 210px
+
+#form .submit_form
+	width: auto
+	height: auto
+	background: #f4f4f4
+	color: #8c8c8c
+	border: solid #dbdbdb 1px
+	border-radius: 20px0
+	font-size: 14px
+	padding: 8px 35px
+	margin-top: 5px
+
+p span
+	color: #de4b39
+
+.no_margin p
+	margin-bottom: 0
+
+/* Item Team -------------------------------------------*/
+
+.team
+	margin-bottom: 97px
+
+.item_team
+	overflow: hidden
+	opacity: 0.5
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+.item_team img
+	border-radius: 50%
+
+.item_team:hover
+	opacity: 1
+	cursor: pointer
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+/* Skills -------------------------------------------*/
+
+.meter
+	position: relative
+	margin: 0px 0 20px 0
+	background: #fff
+	width: 100%      
+
+.meter > span
+	display: block
+	height: 100%
+	position: relative
+	color: #fff
+	padding: 13px 0 13px 10px
+	overflow: hidden
+ 
+.meter span .text_right
+	position: absolute
+	right: 10px
+
+.colora > span
+	background-color: #25ae90
+
+.colorb > span
+	background-color: #de4b39
+
+.colorc > span
+	background-color: #5c9ed1
+
+.colore > span
+	background-color: #ea872c
+
+/* Blog -------------------------------------------*/
+
+.post
+	border-bottom: 2px solid #dbdbdb
+	padding-bottom: 70px
+	margin-bottom: 70px
+
+.post:last-child
+	border-bottom: 0
+	margin-bottom: 0
+	padding-bottom: 0
+
+.post p
+	margin-bottom: 0
+
+.post img
+	width: 100%
+	margin: 0 0 20px 0
+
+.post h1 span
+	color: #de4b39
+
+.post h1 a
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+.post h1 a:hover
+	color: #de4b39
+	-webkit-transition: 0.3s all ease
+	-moz-transition: 0.3s all ease
+	-o-transition: 0.3s all ease
+	-ms-transition: 0.3s all ease
+	transition: 0.3s all ease
+
+.next
+	text-align: right
+
+.navigation_blog
+	font-size: 18px
+
+.navigation_blog ul
+	margin: 0
+	list-style: none
+	text-align: center
+
+.navigation_blog ul li
+	display: inline-block
+	margin: 0 5px
+
+.navigation_blog ul li a:hover
+	color: #de4b39
+
+.navigation_blog ul li .active
+	color: #de4b39
+
+.prev a
+	background: url("../img/prev.png") no-repeat left center
+	padding-left: 30px
+
+.next a
+	background: url("../img/next.png") no-repeat right center
+	padding-right: 30px
+
+.carousel-control.left
+	background: url("../img/left.png") no-repeat left center
+	padding-left: 30px
+
+.carousel-control.right
+	background: url("../img/right.png") no-repeat right center
+	padding-left: 30px
+
+.carousel-control
+	position: absolute
+	top: 45%
+	left: 15px
+	width: 61px
+	height: 61px
+	margin-top: -20px
+	font-size: 0
+	color: transparent
+	text-align: center
+	background: transparent
+	border: 0
+	-webkit-border-radius: 0
+	-moz-border-radius: 0
+	border-radius: 0
+	opacity: 0.5
+	filter: alpha(opacity=50)
+
+.carousel
+	margin-bottom: 0
+
+/* comments ----------------------------*/
+
+.comments .media
+	margin-bottom: 10px
+
+.comments .media .media
+	margin-top: 40px
+
+.comments .media h5
+	padding: 0
+
+.comments .media h5 a:hover
+	color: #de4b39
+
+/* ---------------------------------------------------------------------- */
+/*	 0.4 Version 1024px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 1024px)
+	.content
+		max-width: 700px
+	
+	/* Titles  ----------------------------*/
+
+	.titles_large h1
+		font-size: 60px
+		line-height: 60px
+		letter-spacing: normal
+	
+	.titles h1
+		font-size: 32px
+		line-height: 32px
+		letter-spacing: normal
+	
+	.post h1
+		font-size: 32px
+		line-height: 32px
+		letter-spacing: normal
+
+/* ---------------------------------------------------------------------- */
+/*	 0.5 Version 900px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 900px)
+	.content
+		max-width: 500px
+	
+	.sidebar
+		width: 100px
+
+/* ---------------------------------------------------------------------- */
+/*	0.6 Mobile Version 767px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 767px)
+
+	body
+		font-size: 15px
+		line-height: 18px
+
+	/* ---------------------------------------------------------------------- */
+	/*	03 Structure
+	/* ---------------------------------------------------------------------- */
+
+	/* Sidebar  ---------------------------------------------------------*/
+
+	.sidebar
+		position: absolute
+		background: #1f2b36
+		max-width: 140px
+		width: 120px
+		z-index: 99
+		left: -140px
+		padding: 25px 10px
+		-webkit-transition: 0.3s all ease
+		-moz-transition: 0.3s all ease
+		-o-transition: 0.3s all ease
+		-ms-transition: 0.3s all ease
+		transition: 0.3s all ease
+	
+
+	/* Nav  ---------------------------------------------------------*/
+
+	.nav_responsive
+		background: #000
+		background: rgba(0,0,0,0.6)
+		position: absolute
+		display: block
+		top: 0
+		right: -56px
+		padding: 15px 10px
+		-webkit-transition: 0.3s all ease
+		-moz-transition: 0.3s all ease
+		-o-transition: 0.3s all ease
+		-ms-transition: 0.3s all ease
+		transition: 0.3s all ease		
+	
+	.nav_responsive img
+		width: 36px
+		height: 24px
+	
+	.nav_responsive:hover
+		background: #000
+		background: rgba(0,0,0,0.8)
+		cursor: pointer
+		-webkit-transition: 0.3s all ease
+		-moz-transition: 0.3s all ease
+		-o-transition: 0.3s all ease
+		-ms-transition: 0.3s all ease
+		transition: 0.3s all ease
+	
+
+	/* Header  ---------------------------------------------------------*/
+
+	header
+		width: 90%
+		padding: 30px 5% 15px 5%
+		max-height: 120px
+		text-align: center
+	
+
+	/* Content  ---------------------------------------------------------*/
+
+	.wraper
+		width: 90%
+		float: none
+		margin: 0 auto
+	
+	.content
+		width: 90%
+		max-width: 700px
+		min-width: 240px
+		margin: 0 auto
+		padding: 60px 0
+	
+
+
+	/* Titles  ----------------------------*/
+
+	.titles_large
+		margin-bottom: 80px
+	
+	.titles_large h1
+		font-size: 52px
+		line-height: 52px
+		letter-spacing: normal
+	
+	.titles_large h1 span
+		padding-bottom: 20px
+	
+
+	.titles
+		margin: 0 0 40px 0
+	
+	.titles h1
+		position: relative
+		font-size: 28px
+		line-height: 28px
+		letter-spacing: normal
+	
+	.post h1
+		font-size: 28px
+		line-height: 28px
+		letter-spacing: normal
+
+	.team
+		text-align: center
+	
+	.item_team
+		margin-bottom: 30px
+
+	ul.filter li
+		padding-right: 8px
+		font-size: 12px
+		line-height: 22px
+	
+	ul.filter li span
+		padding-left: 13px
+	
+	.item_portfolio
+		display: inline-block
+		width: 45%
+		margin: 0  4% 30px 0
+
+	.video
+		height: 280px
+	
+	.divisor
+		margin: 60px 0
+	
+	.post
+		padding-bottom: 60px
+		margin-bottom: 60px
+	
+	.navigation_blog
+		text-align: center
+	
+	.next
+		text-align: center
+
+	.home
+		height: auto
+	
+	.blog
+		height: auto
+	
+	.single
+		height: auto
+	
+	.works
+		height: auto
+	
+	.cases
+		height: auto
+	
+	.about
+		height: auto
+	
+	.contact
+		height: auto
+
+/* ---------------------------------------------------------------------- */
+/*	0.7 Mobile Version 568px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 568px)
+
+	/* Titles  ----------------------------*/
+
+	.titles_large
+		margin-bottom: 60px
+
+	.titles_large h1
+		font-size: 42px
+		line-height: 42px
+	
+	.titles_large h1 span
+		padding-bottom: 20px
+
+	.titles
+		margin: 0 0 20px 0
+	
+	.titles h1
+		position: relative
+		font-size: 24px
+		line-height: 24px
+	
+	.titles h1 .line
+		bottom: 10px
+
+	.post h1
+		font-size: 24px
+		line-height: 24px
+	
+	.work
+		width: 100%
+	
+	.work li
+		float: none
+		width: 100%
+	
+	.work li img
+		width: 100%
+
+	.item_portfolio
+		display: block
+		width: 100%
+		margin: 0  0 20px 0
+
+/* ---------------------------------------------------------------------- */
+/*	0.8 Mobile Version 480px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 480px)
+
+
+/* ---------------------------------------------------------------------- */
+/*	0.9 Mobile Version 380px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 380px)
+	
+	/* Titles  ----------------------------*/
+
+	.titles_large
+		margin-bottom: 60px
+	
+	.titles_large h1
+		font-size: 32px
+		line-height: 32px
+	
+	.titles_large h1 span
+		padding-bottom: 10px
+	
+	.navigation_case
+		top: -25px
+		left: 3%
+
+/* ---------------------------------------------------------------------- */
+/*	10 Mobile Version 320px
+/* ---------------------------------------------------------------------- */
+
+@media handheld, only screen and (max-width: 320px)
+	/* Titles  ----------------------------*/
+
+	.titles_large
+		margin-bottom: 40px
+	
+	.titles_large h1
+		font-size: 28px
+		line-height: 28px
+
+	.titles_large h1 span		
+		padding-bottom: 10px
