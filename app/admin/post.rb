@@ -1,10 +1,11 @@
 ActiveAdmin.register Post do
 
+
 	form do |f|
 		f.inputs "Details" do
 			f.input :title
-			f.input :published_at, :label => "Publish Post At"
-			f.input :category
+			f.input "Header Image", as: :file
+			f.input :tags
 		end
 		f.inputs "Content" do
 			f.input :body

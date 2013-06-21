@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   
 
   def index
-
+    @recent_posts = Post.all.limit(3).order("created_at DESC")
   end
 
   def about

@@ -11,14 +11,15 @@
 				%h1
 					Recent Posts
 					%span{class: "line"}
-			- unless @recent_posts.nil?	
-				= for post in @recent_posts do	
-					%article.post
-						%h1
-							= link_to post.title, "/blog/#{post.year}/#{post.month}/#{post.day}/#{post.title}"
-						= link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button", "data-lang" => "en"
+			- unless @recent_posts.nil?
+				= @recent_posts[0]
+				/ = for post in @recent_posts do	
+				/ 	%article.post
+				/ 		%h1
+				/ 			= link_to post.title, "/blog/#{post.year}/#{post.month}/#{post.day}/#{post.title}"
+				/ 		= link_to "Tweet", "https://twitter.com/share", class: "twitter-share-button", "data-lang" => "en"
 
-						= image_tag post.header_pic, alt: ""
-						%p 
-							= truncate(sanitize(post.body), lenght: 150, omission: "... Read On Playa")
+				/ 		= image_tag post.header_pic, alt: ""
+				/ 		%p 
+				/ 			= truncate(sanitize(post.body), lenght: 150, omission: "... Read On Playa")
 				
